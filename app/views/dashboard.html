@@ -1,0 +1,38 @@
+<div class="page-header">
+    <div class="text-center">
+        <h2>Welcome {{ user.name }} to your FB Viewer dashboard.</h2>
+        {{ jason }}
+
+    </div>
+    <div class="text-right logout">
+        <button type="submit" name="logout" class="btn btn-danger" ng-click="fbLogout()">Logout</button>
+    </div>
+</div>
+
+<div class="well">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <img src="{{ userData.picture.data.url }}" alt="" />
+                        </div>
+                        <div class="col-md-11">
+                            <h3>{{ userData.name }}</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p>Disclamier... Due to Facebooks rediculous API, I only brought in the pubic data that they allow since this is just a test app. If we were to build a full on app we would need to register our app with Facebook and then there is ALOT of data we can play with!</p>
+                    <button type="submit" name="show" class="btn btn-danger" ng-click="userInfo = !userInfo">Show My Info</button>
+                    <div ng-hide="!userInfo">
+                        <h4>Gender: {{ userData.gender }}</h4>
+                        <h4>You are at least {{ userData.age_range.min }}yrs old.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

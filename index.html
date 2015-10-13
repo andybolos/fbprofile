@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html ng-app="fb-view">
-    <head>
-        <meta charset="utf-8">
-        <title>FaceBook Profiler</title>
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+<head>
+    <meta charset="utf-8">
+    <title>FaceBook Profiler</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app/styles/style.css">
 
 
 
 
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="bower_components/angular/angular.js"></script>
-    </head>
-    <body>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="http://connect.facebook.net/en_US/all.js"></script>
+    <script src="app/app.js"></script>
 
-        <ui-view></ui-view>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <ui-view></ui-view>
 
 
-        <!-- UI-Router -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 
-        <!-- APP -->
-        <script src="app/app.js"></script>
 
-        <!-- Controllers -->
-        <script src="app/controllers/homeCtrl.js"></script>
-    </body>
+
+    <!-- UI-Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/controllers/homeCtrl.js"></script>
+    <script src="app/controllers/dashboardCtrl.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/dataService.js"></script>
+
+</body>
+
 </html>
